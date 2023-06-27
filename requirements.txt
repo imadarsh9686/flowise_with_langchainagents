@@ -1,6 +1,7 @@
 langchain  
 tiktoken
 openai 
+libmagic
 unstructured 
 selenium 
 youtube-transcript-api 
