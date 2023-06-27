@@ -1,3 +1,4 @@
+pip==23.1.2
 langchain==0.0.216
 faiss-cpu==1.7.4
 openai==0.27.8
@@ -17,7 +18,7 @@ pdfminer.six==20221105
 pypandoc==1.11
 python-docx==0.8.11
 python-pptx==0.6.21
-python-magic-bin==0.4.14
+python-magic-win64==0.4.13
 trio==0.22.0
 trio-websocket==0.10.3
 loguru==0.7.0
