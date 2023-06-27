@@ -1,0 +1,8 @@
+langchain  
+tiktoken
+openai 
+unstructured 
+selenium 
+youtube-transcript-api 
+pytube 
+pinecone-client
