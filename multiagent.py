@@ -22,9 +22,9 @@ def home():
     from langchain.chains.summarize import load_summarize_chain
     from langchain.document_loaders import UnstructuredURLLoader, SeleniumURLLoader
     import pinecone
-    import nltk
+    #import nltk
 
-    nltk.download('punkt')
+    #nltk.download('punkt')
     # openai_api_key = "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"
 
     os.environ["PINECONE_API_KEY"] = pineconekey
@@ -140,10 +140,7 @@ def home():
                     st.write("List is empty now. Please paste your URLs one by one.")
 
                 if st.button("(RUN)✅ Press Here to Run"):
-                    urls = [
-
-                        'https://cobusgreyling.medium.com/openai-function-calling-98fbf9539d2a'
-                    ]
+                    urls = [   ]
 
                     try:
                         loaders = UnstructuredURLLoader(urls=urls)
