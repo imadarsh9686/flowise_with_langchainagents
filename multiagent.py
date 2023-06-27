@@ -22,9 +22,9 @@ def home():
     from langchain.chains.summarize import load_summarize_chain
     from langchain.document_loaders import UnstructuredURLLoader, SeleniumURLLoader
     import pinecone
-    #import nltk
+    import nltk
 
-    #nltk.download('punkt')
+    nltk.download('punkt')
     # openai_api_key = "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"
 
     os.environ["PINECONE_API_KEY"] = pineconekey
@@ -80,7 +80,11 @@ def home():
 
         docs_chunks = []
 
-      
+        # openai_api_key = os.environ.get('API_KEY')
+        # openai_api_key = "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"
+        # pineconekey = "f4e3f5b8-fc9a-4d6d-be18-ba5f200e0e52"
+        # pineconeEnv = "us-west1-gcp-free"
+
         # Initialize Pinecone
         pinecone.init(api_key=pineconekey, environment=pineconeEnv)
         # index_name2 = "babyagi"
@@ -136,12 +140,10 @@ def home():
                     st.write("List is empty now. Please paste your URLs one by one.")
 
                 if st.button("(RUN)✅ Press Here to Run"):
-                    
                     urls = [
-'https://cobusgreyling.medium.com/openai-function-calling-98fbf9539d2a'
 
-]
-                    
+                        'https://cobusgreyling.medium.com/openai-function-calling-98fbf9539d2a'
+                    ]
 
                     try:
                         loaders = UnstructuredURLLoader(urls=urls)
@@ -155,7 +157,7 @@ def home():
                         print("Trying with SeleniumURLLoader...")
 
                         try:
-                            loader = SeleniumURLLoader(urls=urls_list)
+                            loader = SeleniumURLLoader(urls=urls)
                             data = loader.load()
                             print("Data loaded successfully with SeleniumURLLoader.")
                         except Exception as e:
@@ -265,7 +267,7 @@ def home():
             No="No"
 
             answer1 = conversation1.predict(
-                input=f"For the question{user_input} just answer it from this content given only give the content answer  {chatlist} if u dont feel answer is correct or do not find the answer in the content provided  strictly give output with just word No , your output must be strictly always single word No as output if you do not found relevant answer for the userinput from content")
+                input=f"For the question{user_input} just answer it from this content given only give the content answer  {chatlist} if u dont feel answer is correct or do not find the answer in the content strictly give strictly output with word No donot give any reason just give output with word No")
                  #input=f"your goal is to provide accurate responses to user queries. you will utilize the provided content, specifically the {chatlist}, to generate an answer based on the user's {user_input}. If you can find a suitable answer in the content, you will provide it as the output. However, if you cannot find a relevant answer or struggle to provide an appropriate response, you will strictly give output with word {No} Please note that your responses will be limited to either an accurate answer from the content or a straightforward word {No} if the answer cannot be determined.")
                 #input=f" you are an chat bot your work is to give correct response to the user from this  user input :- {user_input} just answer it from this content given output answer should be either answer from content or give No as output if you donot know the answer  this the content:-{chatlist} if u dont feel answer/response is correct for the user input or do not find the answer in the content strictly give strictly output with word No donot make any sentences")
             st.write("answer 1", answer1)
@@ -318,11 +320,11 @@ st.sidebar.title("Paste your URL 🤖 BELOW")
 page = st.sidebar.radio(".", options=list(pages.keys()))
 
 with st.sidebar:
-    openai_api_key = st.secrets["openai_api_key"]
-    pineconekey = st.secrets["pineconekey"]
+    openai_api_key = "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"
+    pineconekey = "be4c2da4-7e75-4f64-becd-75802b4ca015"
     pineconeEnv = "us-west1-gcp-free"
     index_name2 = "axstream"
-    serp_api = st.secrets["serp_api"]
+    serp_api = "bd5aa146707cbfc61f66e5d0e7cd50ba67c4d2219299a7a20dc79a89a6dc988d"
 
 if openai_api_key and pineconekey and pineconeEnv and index_name2 and serp_api:
 
