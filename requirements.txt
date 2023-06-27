@@ -27,3 +27,4 @@ marshmallow-enum==1.5.1
 typing-inspect==0.9.0
 async-generator==1.10
 outcome==1.2.0
+tiktoken
