@@ -141,9 +141,14 @@ def home():
 
                 if st.button("(RUN)✅ Press Here to Run"):
                     
+                    urls = [
+'https://cobusgreyling.medium.com/openai-function-calling-98fbf9539d2a'
+
+]
+                    
 
                     try:
-                        loaders = UnstructuredURLLoader(urls=urls_list)
+                        loaders = UnstructuredURLLoader(urls=urls)
                         data = loaders.load()
                         print("Data loaded successfully with UnstructuredURLLoader.")
                         st.write(data)
