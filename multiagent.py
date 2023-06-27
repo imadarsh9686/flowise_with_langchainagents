@@ -140,10 +140,10 @@ def home():
                     st.write("List is empty now. Please paste your URLs one by one.")
 
                 if st.button("(RUN)✅ Press Here to Run"):
-                    urls = [   ]
+                    
 
                     try:
-                        loaders = UnstructuredURLLoader(urls=urls)
+                        loaders = UnstructuredURLLoader(urls=urls_list)
                         data = loaders.load()
                         print("Data loaded successfully with UnstructuredURLLoader.")
                         st.write(data)
@@ -154,7 +154,7 @@ def home():
                         print("Trying with SeleniumURLLoader...")
 
                         try:
-                            loader = SeleniumURLLoader(urls=urls)
+                            loader = SeleniumURLLoader(urls=urls_list)
                             data = loader.load()
                             print("Data loaded successfully with SeleniumURLLoader.")
                         except Exception as e:
