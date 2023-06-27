@@ -3,6 +3,7 @@ import streamlit as st
 
 # Create a function for each page
 def home():
+    
     import os
     from langchain.text_splitter import CharacterTextSplitter
 
@@ -22,9 +23,9 @@ def home():
     from langchain.chains.summarize import load_summarize_chain
     from langchain.document_loaders import UnstructuredURLLoader, SeleniumURLLoader
     import pinecone
-    import nltk
+    #import nltk
 
-    nltk.download('punkt')
+    #nltk.download('punkt')
     # openai_api_key = "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"
 
     os.environ["PINECONE_API_KEY"] = pineconekey
@@ -267,7 +268,7 @@ def home():
             No="No"
 
             answer1 = conversation1.predict(
-                input=f"For the question{user_input} just answer it from this content given only give the content answer  {chatlist} if u dont feel answer is correct or do not find the answer in the content strictly give strictly output with word No donot give any reason just give output with word No")
+                input=f"For the question{user_input} just answer it from this content given only give the content answer  {chatlist} if u dont feel answer is correct or do not find the answer in the content strictly give strictly output with word No donot give any reason just give output with word No ")
                  #input=f"your goal is to provide accurate responses to user queries. you will utilize the provided content, specifically the {chatlist}, to generate an answer based on the user's {user_input}. If you can find a suitable answer in the content, you will provide it as the output. However, if you cannot find a relevant answer or struggle to provide an appropriate response, you will strictly give output with word {No} Please note that your responses will be limited to either an accurate answer from the content or a straightforward word {No} if the answer cannot be determined.")
                 #input=f" you are an chat bot your work is to give correct response to the user from this  user input :- {user_input} just answer it from this content given output answer should be either answer from content or give No as output if you donot know the answer  this the content:-{chatlist} if u dont feel answer/response is correct for the user input or do not find the answer in the content strictly give strictly output with word No donot make any sentences")
             st.write("answer 1", answer1)
