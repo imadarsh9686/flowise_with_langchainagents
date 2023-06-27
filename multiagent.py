@@ -320,11 +320,11 @@ st.sidebar.title("Paste your URL 🤖 BELOW")
 page = st.sidebar.radio(".", options=list(pages.keys()))
 
 with st.sidebar:
-    openai_api_key = "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"
-    pineconekey = "be4c2da4-7e75-4f64-becd-75802b4ca015"
+    openai_api_key = st.secrets["openai_api_key"]
+    pineconekey = st.secrets["pineconekey"]
     pineconeEnv = "us-west1-gcp-free"
     index_name2 = "axstream"
-    serp_api = "bd5aa146707cbfc61f66e5d0e7cd50ba67c4d2219299a7a20dc79a89a6dc988d"
+    serp_api = st.secrets["serp_api"]
 
 if openai_api_key and pineconekey and pineconeEnv and index_name2 and serp_api:
 
