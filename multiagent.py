@@ -24,7 +24,7 @@ def home():
     import pinecone
     import nltk
 
-    #nltk.download('punkt')
+    nltk.download('punkt')
     # openai_api_key = "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"
 
     os.environ["PINECONE_API_KEY"] = pineconekey
