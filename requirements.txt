@@ -4,7 +4,7 @@ openai
 unstructured 
 python-magic==0.4.27
 python-libmagic
-libmagic1
+
 selenium 
 youtube-transcript-api 
 pytube 
