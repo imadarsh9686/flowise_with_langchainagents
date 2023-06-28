@@ -2,6 +2,9 @@ langchain==0.0.217
 tiktoken
 openai 
 unstructured 
+python-magic==0.4.27
+python-magic-bin==0.4.14
+#libmagic1
 selenium 
 youtube-transcript-api 
 pytube 
