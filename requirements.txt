@@ -1,7 +1,7 @@
 streamlit
 python-dotenv
-langchain
-
+langchain==0.0.217
+tiktoken
 openai 
 unstructured 
 
