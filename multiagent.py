@@ -24,9 +24,9 @@ def home():
     from langchain.chains.summarize import load_summarize_chain
     from langchain.document_loaders import UnstructuredURLLoader, SeleniumURLLoader
     import pinecone
-    import nltk
+    #import nltk
 
-    nltk.download('punkt')
+    #nltk.download('punkt')
     # openai_api_key = "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"
 
     os.environ["PINECONE_API_KEY"] = pineconekey
