@@ -4,6 +4,7 @@ tiktoken
 openai 
 unstructured 
 libmagic
+python-magic==0.4.15
 selenium 
 youtube-transcript-api 
 pytube 
