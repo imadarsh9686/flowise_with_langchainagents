@@ -1,5 +1,5 @@
-pip==23.1.2
-langchain==0.0.216
+
+langchain==0.0.217
 faiss-cpu==1.7.4
 openai==0.27.8
 unstructured==0.7.9
