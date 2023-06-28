@@ -32,8 +32,8 @@ def home():
     #nltk.download('punkt')
     # openai_api_key = "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"
 
-    #os.environ["PINECONE_API_KEY"] = pineconekey
-    #os.environ["OPENAI_API_KEY"] = openai_api_key
+    os.environ["PINECONE_API_KEY"] = pineconekey
+    os.environ["OPENAI_API_KEY"] = openai_api_key
 
     st.title("🦜")
     # Add content specific to the home page
