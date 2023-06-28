@@ -265,7 +265,7 @@ def home():
                 #memory=ConversationBufferMemory()
             )
 
-            No="No"
+            
 
             answer1 = conversation1.predict(
                 input=f"For the question{user_input} just answer it from this content given only give the content answer  {chatlist} if u dont feel answer is correct or do not found the answer in the context provided or if the quetion is realted to realtime information strictly give strictly output with word No ")
@@ -278,7 +278,7 @@ def home():
 
 
 
-            if answer1=="No." :
+            if answer1=="No" :
                 if response1 or response is not None:
                     # Add bot response to conversation history
                     chatlist.append({"internet_result": response1, "document result": response})
