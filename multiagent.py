@@ -1,4 +1,5 @@
 import streamlit as st
+import magic
 
 
 # Create a function for each page
