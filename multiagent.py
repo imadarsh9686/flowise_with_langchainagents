@@ -1,5 +1,7 @@
 import streamlit as st
 import os
+from dotenv import load_dotenv
+
 
 
 
@@ -323,6 +325,8 @@ st.sidebar.title("Paste your URL 🤖 BELOW")
 page = st.sidebar.radio(".", options=list(pages.keys()))
 
 with st.sidebar:
+    #APPLYING SECRETS
+    load_dotenv()
     openai_api_key = os.getenv("openai_api_key")
     pineconekey = os.getenv("pineconekey")
     pineconeEnv = "us-west1-gcp-free"
