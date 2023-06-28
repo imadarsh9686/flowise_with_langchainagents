@@ -1,11 +1,12 @@
 import streamlit as st
+import os
 
 
 
 # Create a function for each page
 def home():
     
-    import os
+    #import os
     from langchain.text_splitter import CharacterTextSplitter
 
     # from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -29,8 +30,8 @@ def home():
     #nltk.download('punkt')
     # openai_api_key = "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"
 
-    os.environ["PINECONE_API_KEY"] = pineconekey
-    os.environ["OPENAI_API_KEY"] = openai_api_key
+    #os.environ["PINECONE_API_KEY"] = pineconekey
+    #os.environ["OPENAI_API_KEY"] = openai_api_key
 
     st.title("🦜")
     # Add content specific to the home page
@@ -322,11 +323,11 @@ st.sidebar.title("Paste your URL 🤖 BELOW")
 page = st.sidebar.radio(".", options=list(pages.keys()))
 
 with st.sidebar:
-    openai_api_key = st.secrets["openai_api_key"]
-    pineconekey = st.secrets["pineconekey"]
+    openai_api_key = os.getenv["openai_api_key"]
+    pineconekey = os.getenv["pineconekey"]
     pineconeEnv = "us-west1-gcp-free"
     index_name2 = "axstream"
-    serp_api = st.secrets["serp_api"]
+    serp_api = os.getenv["serp_api"]
 
 if openai_api_key and pineconekey and pineconeEnv and index_name2 and serp_api:
 
